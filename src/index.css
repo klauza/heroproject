@@ -13,8 +13,16 @@ code {
   margin: 0;
   padding: 0; }
 
-/* Navbar.js */
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
 .logo {
+  color: black;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2em;
   line-height: 70px; }
 
 .nav-wrapper {
@@ -22,11 +30,6 @@ code {
   height: 70px;
   background: grey; }
 
-.container {
-  width: 80%;
-  margin: 0 auto; }
-
-/* SignedInLinks.js */
 .right {
   float: right;
   display: -webkit-flex;
@@ -51,9 +54,19 @@ code {
 .user-button {
   background: #ffc6c6; }
 
-.logo {
-  color: black;
-  list-style: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 2em; }
+.dashboard-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .dashboard-row__col1 {
+    min-height: 500px; }
+    .dashboard-row__col1 .project-list {
+      border: 1px solid black; }
+      .dashboard-row__col1 .project-list .card-title {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        padding-top: 30px; }
+      .dashboard-row__col1 .project-list p:nth-of-type(1) {
+        padding: 10px 0; }
+      .dashboard-row__col1 .project-list .text-date {
+        font-size: 0.9em;
+        color: grey; }

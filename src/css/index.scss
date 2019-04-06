@@ -1,2 +1,3 @@
-@import '../scss/all';
-@import '../scss/logo';
+@import '../scss/general'; // overall widths/heights
+@import '../scss/navbar'; // navbar.js + SignedInLinks.js + SignedOutLinks.js
+@import '../scss/dashboard'; // Dashboard.js + ProjectList.js + Notifications.js

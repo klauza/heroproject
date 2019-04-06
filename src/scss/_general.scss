@@ -13,46 +13,15 @@ code {
     monospace;
 }
 
+// CUSTOM
 *, *::before, *::after{
   box-sizing: border-box;
   margin: 0; padding: 0;
 }
 
 
-/* Navbar.js */
-.logo{
-  line-height: 70px;
-}
-.nav-wrapper{
-  width: 100%;
-  height: 70px;
-  background: grey;
-}
 .container{
   width: 80%;
   margin: 0 auto;
 }
 
-/* SignedInLinks.js */
-.right{
-  float: right;
-  display: flex;
-  flex-direction: row;
-}
-.right li{
-  text-align: center;
-  width: 100px;
-  list-style: none;
-  line-height: 70px;
-}
-.right li .navlink{
-  display: block;
-  text-decoration: none;
-  color: black;
-}
-.right li .navlink:hover{
-  background: rgb(158, 158, 158);
-}
-.user-button{
-  background: rgb(255, 198, 198);
-}

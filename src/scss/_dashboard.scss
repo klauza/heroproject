@@ -1,0 +1,35 @@
+// Dashboard.js + Notifications.js
+
+.dashboard{
+  &-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__col1{
+      min-height: 500px;
+
+      .project-list{
+        border: 1px solid black;
+
+        .card-title{
+          font-size: 1.5em;
+          text-transform: uppercase;
+          padding-top: 30px;
+        }
+        p:nth-of-type(1){
+          padding: 10px 0;
+        }
+        .text-date{
+          font-size: 0.9em;
+          color: grey;
+        }
+      }
+
+    }
+
+
+    &__col2{
+
+    }
+  }
+}
