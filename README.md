@@ -1,4 +1,8 @@
-v0.0.2
+A fullstack app<br>
+current version: v0.0.3a<br>
+version history:<br>
+- v0.0.3a Redux, reducers set up, store set up
+
 ## Available Scripts
 
 In the project directory, you can run:
