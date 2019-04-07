@@ -1,6 +1,7 @@
 A fullstack app<br>
-current version: v0.0.3b<br><br>
+current version: v0.0.4<br><br>
 version history:<br>
+- v0.0.4 redux-thunk
 - v0.0.3b adding dummy data
 - v0.0.3a Redux, reducers set up, store set up
 
