@@ -1,10 +1,12 @@
 A fullstack app<br>
-current version: v0.0.4<br><br>
+current version: v0.0.45<br><br>
 version history:<br>
+- v0.0.5 firebase implementation
 - v0.0.4 redux-thunk
 - v0.0.3b adding dummy data
 - v0.0.3a Redux, reducers set up, store set up
-
+- v0.0.1-0.0.3 project init
+<br>
 ## Available Scripts
 
 In the project directory, you can run:
