@@ -1,6 +1,7 @@
 A fullstack app<br>
-current version: v0.0.45<br><br>
+current version: v0.0.6<br><br>
 version history:<br>
+- v0.0.6 dependecies versions changed. Connect to firebase and displaying data.
 - v0.0.5 firebase implementation
 - v0.0.4 redux-thunk
 - v0.0.3b adding dummy data
