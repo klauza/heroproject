@@ -1,8 +1,8 @@
 A fullstack app<br>
-current version: v0.0.9a<br><br>
+current version: v0.0.9b<br><br>
 version history:<br>
 
-- v0.0.9a user sign up system
+- v0.0.9a/b user sign up system + profile data access
 - v0.0.8 redirections
 - v0.0.7a/b authentication, creating user system - logging in/out
 - v0.0.6 dependecies versions changed. Connect to firebase and displaying data.
