@@ -1,16 +1,17 @@
 A fullstack app<br>
-current version: v0.0.9b<br><br>
+current version: v0.1.0<br><br>
 version history:<br>
 
-- v0.0.9a/b user sign up system + profile data access & Date change
-- v0.0.8 redirections
-- v0.0.7a/b authentication, creating user system - logging in/out
-- v0.0.6 dependecies versions changed. Connect to firebase and displaying data.
-- v0.0.5 firebase implementation
+- v0.1.0 finished the fundamentals
+- v0.0.9a/b User sign up system + profile data access & Date change.
+- v0.0.8 Redirections
+- v0.0.7a/b Authentication, creating user system - logging in/out.
+- v0.0.6 Dependecies version changed. Connect to firebase and displaying data.
+- v0.0.5 Firebase implementation
 - v0.0.4 redux-thunk
-- v0.0.3b adding dummy data
+- v0.0.3b Adding dummy data.
 - v0.0.3a Redux, reducers set up, store set up
-- v0.0.1-0.0.3 project init
+- v0.0.1-0.0.3 Project init
 <br>
 ## Available Scripts
 
