@@ -1,6 +1,7 @@
 // a module component for ProjectList.js
 
 import React from 'react';
+import moment from 'moment'
 
 const ProjectSummary = ({project}) => {
   return(
@@ -8,7 +9,7 @@ const ProjectSummary = ({project}) => {
       <div className="card-content">
         <div className="card-title">{project.title}</div>
         <p>Posted by {project.authorFirstName} {project.authorLastName}</p>
-        <p className="text-date">8 January 2019</p>
+        <p className="text-date">{moment(project.createdAt.toDate()).calendar()}</p>
       </div>
     </div>
   )
