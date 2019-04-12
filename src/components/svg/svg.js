@@ -1,0 +1,1 @@
+//console.log(document.getElementById('svg1').checked);
