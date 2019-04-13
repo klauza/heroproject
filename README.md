@@ -1,7 +1,8 @@
 A fullstack app<br>
-current version: v0.1.1<br><br>
+current version: v0.1.2<br><br>
 version history:<br>
 
+- v0.1.2 sass edits
 - v0.1.1 svg added, validation project done
 - v0.1.0 finished the fundamentals
 - v0.0.9a/b User sign up system + profile data access & Date change.

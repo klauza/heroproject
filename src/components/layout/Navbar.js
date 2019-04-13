@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
 import { connect } from 'react-redux';
+import navbarIcon from '../svg/robot-arm.svg';
 
 const Navbar = (props) => {
   const { auth, profile } = props;
@@ -13,8 +14,12 @@ const Navbar = (props) => {
 
   return (
     <nav className="nav-wrapper">
-      <div className="container">
-        <Link to='/' className="logo">hero project</Link>
+      <div className="container nav-container">
+        
+        <Link to='/' className="logo">
+          <img className="navbar-icon" src={navbarIcon} />
+          <p>hero project</p>
+        </Link>
         { links }
       </div>
     </nav>

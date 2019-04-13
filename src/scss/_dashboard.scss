@@ -9,19 +9,62 @@
       min-height: 500px;
 
       .project-list{
+        margin-top: 25px;
         border: 1px solid black;
+        &>*{ // links
+          text-decoration: none;
+        }
 
-        .card-title{
-          font-size: 1.5em;
-          text-transform: uppercase;
-          padding-top: 30px;
-        }
-        p:nth-of-type(1){
-          padding: 10px 0;
-        }
-        .text-date{
-          font-size: 0.9em;
-          color: grey;
+        // single card content
+        .card-content{
+          background: rgba(173, 216, 230, 1);
+          margin-bottom: 35px;
+        
+          .card-title{
+            text-align: center;
+            color: black;
+            font-size: 1.5em;
+            font-family: $ff-sm;
+            text-transform: uppercase;
+            line-height: 65px;
+            background: rgba(128, 128, 128, 0.15);
+            
+          }
+
+          .svg-container{
+            position: relative;
+            width: 50px;
+            margin: 10px auto;
+            border: 1px solid red;
+          }
+
+
+
+          .card-footer{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 5px 10px;
+            background: rgba(0, 0, 0, 0.15);
+            .card-para{
+              text-align: left;
+              color: black;
+              font-size: 1.00em;
+              font-family: $ff-sm;
+              justify-self: left;
+              align-self: center;
+              grid-column: 1 / 2;
+            }
+            .text-date{
+              grid-column: 2 / 4;
+              justify-self: center;
+              align-self: center;
+              font-size: 0.80em;
+              color: grey;
+              font-family: Verdana, sans-serif;
+            }
+          }
+
+
         }
       }
 
@@ -29,7 +72,26 @@
 
 
     &__col2{
+      .author-container{
+        background: goldenrod;
+        position: sticky;
+        top: 0px;
+        margin-top: 25px;
+        padding: 25px 0;
 
+        &__name{
+          text-align: center;
+        }
+        &__page{
+          text-align: center;
+          margin-top: 30px;
+        }
+        &__desc{
+          text-align: center;
+          padding: 0 45px;
+          margin-top: 10px;
+        }
+      }
     }
   }
 }

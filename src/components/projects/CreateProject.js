@@ -12,8 +12,7 @@ import chest2 from '../svg/chest/torso2.svg'
 /* legs svg */
 import legs1 from '../svg/legs/men-legs.svg'
 import legs2 from '../svg/legs/clothes.svg'
-//import svgjs from '../svg/javascript.svg'
-//import svgjs2 from '../svg/github.svg'
+
 
 class CreateProject extends Component {
 
@@ -67,70 +66,72 @@ class CreateProject extends Component {
     
 
     return (
-      <div className="container">
-        <form onSubmit={this.handleSubmit} className="signForm">
-          <h5>Create new project</h5>
-
-          <div className="input-field">
-            <label htmlFor="title">Title</label>
-            <input type="text" id="title" onChange={this.handleChange} />
-          </div>
-
-          <div className="input-field">
-            <label htmlFor="content">Project Content</label>
-            <textarea id="content" onChange={this.handleChange}></textarea>
-          </div>
-      
-
-          <p>choose helmet:</p>
-          <div className="input-field">
-            <label>
-              <img className="svg-icons" src={head1} />
-              <input id="svg1" type="radio" src={head1} name="head-radio" onClick={this.handleClick} />
-            </label>
-          </div>
-
-          <div className="input-field">
-            <label>
-              <img className="svg-icons" src={head2} />
-              <input id="svg1" type="radio" src={head2} name="head-radio" onClick={this.handleClick} />
-            </label>
-          </div>
-
-          <p>choose chest</p>
-          <div className="input-field">
-            <label>
-              <img className="svg-icons" src={chest1} />
-              <input id="svg2" type="radio" src={chest1} name="chest-radio" onClick={this.handleClick} />
-            </label>
-          </div>
+      <div className="container create-project-container">
+        <form onSubmit={this.handleSubmit}>
           
-          <div className="input-field">
-            <label>
-              <img className="svg-icons" src={chest2} />
-              <input id="svg2" type="radio" src={chest2} name="chest-radio" onClick={this.handleClick} />
-            </label>
+          <div className="hero-details">
+            <h5>Create new hero</h5>
+            <div className="input-field">
+              <label className="input-title-text" htmlFor="title">Hero name</label>
+              <input className="input-title-textfield" type="text" id="title" onChange={this.handleChange} />
+            </div>
+
+            <div className="input-field">
+              <label maxlength="15" className="input-title-text" htmlFor="content">Hero description</label>
+              <textarea maxlength="75" className="input-title-textfield textfield" id="content" onChange={this.handleChange}></textarea>
+            </div>
           </div>
 
-         <p>choose legs</p>
 
-         <div className="input-field">
-            <label>
-              <img className="svg-icons" src={legs1} />
-              <input id="svg3" type="radio" src={legs1} name="legs-radio" onClick={this.handleClick} />
-            </label>
-          </div>
+          
+          <div className="hero-accessories">
+            <p>choose helmet</p>
 
+            <div className="input-field">
+              <div className="item">
+                <label>
+                  <img className="svg-icons" src={head1} />
+                  <input id="svg1" type="radio" src={head1} name="head-radio" onClick={this.handleClick} />
+                </label>
+              </div>
+
+              <div className="item">
+                <label>
+                  <img className="svg-icons" src={head2} />
+                  <input id="svg1" type="radio" src={head2} name="head-radio" onClick={this.handleClick} />
+                </label>
+              </div>
+            </div>
+
+            <p>choose chest</p>
+            <div className="input-field">
+              <label>
+                <img className="svg-icons" src={chest1} />
+                <input id="svg2" type="radio" src={chest1} name="chest-radio" onClick={this.handleClick} />
+              </label>
+   
+              <label>
+                <img className="svg-icons" src={chest2} />
+                <input id="svg2" type="radio" src={chest2} name="chest-radio" onClick={this.handleClick} />
+              </label>
+            </div>
+
+          <p>choose legs</p>
           <div className="input-field">
-            <label>
-              <img className="svg-icons" src={legs2} />
-              <input id="svg3" type="radio" src={legs2} name="legs-radio" onClick={this.handleClick} />
-            </label>
+              <label>
+                <img className="svg-icons" src={legs1} />
+                <input id="svg3" type="radio" src={legs1} name="legs-radio" onClick={this.handleClick} />
+              </label>
+
+              <label>
+                <img className="svg-icons" src={legs2} />
+                <input id="svg3" type="radio" src={legs2} name="legs-radio" onClick={this.handleClick} />
+              </label>
+            </div>
           </div>
      
 
-          <div className="input-field">
-            
+          <div className="input-field-submit">
             <button disabled={!isEnabled}>Create</button>
           </div>
 
