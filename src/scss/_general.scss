@@ -9,8 +9,8 @@ body {
 
   background: url(/img/background.jpg) no-repeat;
   background-size: cover;
-  background-position: center center;
-  height: 100vh;
+  background-position: top center;
+  height: 100%;
 }
 
 code {
@@ -18,15 +18,18 @@ code {
     monospace;
 }
 
-// CUSTOM
+
 *, *::before, *::after{
   box-sizing: border-box;
   margin: 0; padding: 0;
 }
-
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+$ff-sm: 'Sawarabi Mincho', sans-serif;
 
 .container{
   width: 80%;
   margin: 0 auto;
 }
+
 

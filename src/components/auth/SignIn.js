@@ -3,6 +3,11 @@ import { connect } from 'react-redux'
 import { signIn } from '../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
 
+//View last 3 projects:
+import ProjectList from '../projects/ProjectList';
+import { compose } from 'redux';
+import { firestoreConnect} from 'react-redux-firebase';
+
 class SignIn extends Component {
 
   state = {
@@ -22,8 +27,8 @@ class SignIn extends Component {
   }
 
   render() {
-
-    const { authError, auth } = this.props;
+    //projects  - view last 3
+    const { authError, auth, projects } = this.props;
 
     if (auth.uid) return <Redirect to='/' />
 
@@ -49,6 +54,14 @@ class SignIn extends Component {
           </div>
 
         </form>
+      
+      <p>View last 3 projects.</p><br />
+      <div className="dashboard container">
+        <div className="dashboard-row">
+          <div className="dashboard-row__col1"> <ProjectList projects={projects} /> </div>
+        </div>
+      </div>
+
       </div>
     )
   }
@@ -56,7 +69,8 @@ class SignIn extends Component {
 const mapStateToProps = (state) => {
   return{
     authError: state.auth.authError,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    projects: state.firestore.ordered.projects
   }
 }
 const mapDispatchToProps = (dispatch) =>{
@@ -65,4 +79,11 @@ const mapDispatchToProps = (dispatch) =>{
   }
 }
  
-export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
+//export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
+
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  firestoreConnect([
+    { collection: 'projects', orderBy: ['createdAt', 'desc'], limit: 3 } //from most recent
+  ])
+  )(SignIn)
