@@ -1,7 +1,8 @@
 A fullstack app<br>
-current version: v0.1.2<br><br>
+current version: v0.1.3<br><br>
 version history:<br>
 
+- v0.1.3 create hero live function, svg scaled down, credits: https://jakearchibald.github.io/svgomg/
 - v0.1.2 sass edits
 - v0.1.1 svg added, validation project done
 - v0.1.0 finished the fundamentals
