@@ -1,0 +1,83 @@
+.project-details{
+  &__card{
+    //border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    &-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+      .svg-container-details{
+        margin-top: 25px;
+        width: 200px;
+        height: 100%;
+        //border: 1px solid blue;
+        align-self: center;
+        justify-self: center;
+
+        position:relative;
+        .svg-item{
+          width: 100%;
+          position: absolute;
+          
+        }
+        .svg-item:nth-of-type(3){
+          border: 1px solid red;
+          top: 25px; left: 0;
+
+        }
+        .svg-item:nth-of-type(2){ //legs
+          border: 1px solid black;
+          top: 200px; left: 5%;
+          width: 90%;
+        }
+        .svg-item:nth-of-type(1){
+          border: 1px solid orange;
+          top: 350px; left: 0;
+        }
+
+
+      }
+      .about-project{
+        text-align: center;
+        //border: 1px solid red;
+        padding-left: 20px;
+        align-self: center;
+        justify-self: start;
+        .project-title{
+          font-size: 2em;
+          font-weight: bold;
+          font-family: $ff-sm;
+          text-transform: uppercase;
+        }
+        .project-content{
+          
+          font-family: Verdana, sans-serif;
+        }
+        
+        .merge-svg-button{
+          margin-top: 10px;
+          width: 100px;
+          height: 40px;
+        }
+
+      }
+
+
+      
+    }
+    
+
+
+    &-action{
+      margin-top: 10px;
+      text-align: center;
+
+      div:nth-of-type(2){
+        color: grey;
+      }
+    } 
+  }
+}

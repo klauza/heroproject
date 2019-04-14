@@ -123,16 +123,24 @@ code {
     position: sticky;
     top: 0px;
     margin-top: 25px;
-    padding: 25px 0; }
+    padding: 25px 0;
+    font-family: Verdana, sans-serif;
+    cursor: default; }
     .dashboard-row__col2 .author-container__name {
-      text-align: center; }
+      text-align: center;
+      font-size: 1.25em; }
     .dashboard-row__col2 .author-container__page {
       text-align: center;
-      margin-top: 30px; }
+      margin-top: 30px;
+      font-size: 1.25em; }
     .dashboard-row__col2 .author-container__desc {
       text-align: center;
-      padding: 0 45px;
+      padding: 0 5%;
       margin-top: 10px; }
+    .dashboard-row__col2 .author-container__desc ol li {
+      text-align: left; }
+      .dashboard-row__col2 .author-container__desc ol li:hover {
+        color: #3a3a3a; }
 
 .svg1-edit,
 .svg2-edit,
@@ -142,24 +150,15 @@ code {
 
 .svg-icons {
   width: 50px; }
+  .svg-icons:hover {
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.4); }
 
 .police-helmet {
   width: 100px; }
 
 .all-svg-container {
   display: none; }
-
-.completed {
-  width: 200px;
-  height: 200px;
-  border: 1px solid black; }
-
-.completed .helmets > *,
-.completed .torsos > *,
-.completed .legs > * {
-  width: 50px;
-  height: 50px;
-  border: 1px solid red; }
 
 .hero-accessories .input-field input {
   visibility: hidden;
@@ -212,3 +211,82 @@ code {
   .create-project-container .input-field-submit button {
     width: 100%;
     height: 100%; }
+
+.create-project-container .completed {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 10px auto; }
+
+.create-project-container .completed {
+  text-align: center; }
+  .create-project-container .completed .helmets > *,
+  .create-project-container .completed .torsos > *,
+  .create-project-container .completed .legs > * {
+    width: 50px;
+    height: 50px; }
+  .create-project-container .completed .helmets p,
+  .create-project-container .completed .torsos p,
+  .create-project-container .completed .legs p {
+    text-align: center;
+    text-transform: uppercase; }
+
+.project-details__card {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-content: center;
+          align-content: center; }
+  .project-details__card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px; }
+    .project-details__card-content .svg-container-details {
+      margin-top: 25px;
+      width: 200px;
+      height: 100%;
+      -webkit-align-self: center;
+              align-self: center;
+      justify-self: center;
+      position: relative; }
+      .project-details__card-content .svg-container-details .svg-item {
+        width: 100%;
+        position: absolute; }
+      .project-details__card-content .svg-container-details .svg-item:nth-of-type(3) {
+        border: 1px solid red;
+        top: 25px;
+        left: 0; }
+      .project-details__card-content .svg-container-details .svg-item:nth-of-type(2) {
+        border: 1px solid black;
+        top: 200px;
+        left: 5%;
+        width: 90%; }
+      .project-details__card-content .svg-container-details .svg-item:nth-of-type(1) {
+        border: 1px solid orange;
+        top: 350px;
+        left: 0; }
+    .project-details__card-content .about-project {
+      text-align: center;
+      padding-left: 20px;
+      -webkit-align-self: center;
+              align-self: center;
+      justify-self: start; }
+      .project-details__card-content .about-project .project-title {
+        font-size: 2em;
+        font-weight: bold;
+        font-family: "Sawarabi Mincho", sans-serif;
+        text-transform: uppercase; }
+      .project-details__card-content .about-project .project-content {
+        font-family: Verdana, sans-serif; }
+      .project-details__card-content .about-project .merge-svg-button {
+        margin-top: 10px;
+        width: 100px;
+        height: 40px; }
+  .project-details__card-action {
+    margin-top: 10px;
+    text-align: center; }
+    .project-details__card-action div:nth-of-type(2) {
+      color: grey; }

@@ -4,29 +4,53 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { Redirect } from 'react-router-dom'
 import moment from 'moment'
+import MergeSvgs from './MergeSvgs.js'
+
+
+
+
 
 
 function ProjectDetails(props) {
-  const id = props.match.params.id;
+  // const id = props.match.params.id; // id was not used
   //console.log(props);
   const { project, auth } = props;
 
   if (!auth.uid) return <Redirect to='/signin' />
-
+  
+  
+  
   if (project){
+    
     return(
     <div className="container project-details">
       <div className="project-details__card">
 
         <div className="project-details__card-content">
-          <span className="card-title"> { project.title }</span>
-          <p> { project.content } </p>
+          <div className="svg-container-details" id="svg-items">
+            
+            <object className="svg-item" data={project.svg3} alt="svg3"></object>
+            <object className="svg-item" data={project.svg2} alt="svg2"></object>
+            <object className="svg-item" data={project.svg1} alt="svg1"></object>
+            
+          </div>
+          <div className="about-project">
+            <span className="project-title"> { project.title }</span>
+            <p className="project-content"> { project.content } </p>
+          
+            <MergeSvgs />
+            
+          </div>
+          
+          
         </div>
 
         <div className="project-details__card-action">
           <div>Posted by: { project.authorFirstName } { project.authorLastName } </div>
           <div>{moment(project.createdAt.toDate()).calendar()}</div>
         </div>
+
+        
 
       </div>
     </div>
@@ -35,9 +59,10 @@ function ProjectDetails(props) {
       <div className="container">Loading project...</div>
     )
   }
-
- 
+  
 }
+  
+
 
 const mapStateToProps = (state, ownProps) =>{
   //console.log(state);

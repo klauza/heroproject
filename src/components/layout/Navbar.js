@@ -17,7 +17,7 @@ const Navbar = (props) => {
       <div className="container nav-container">
         
         <Link to='/' className="logo">
-          <img className="navbar-icon" src={navbarIcon} />
+          <img className="navbar-icon" src={navbarIcon} alt="navbar-icon"/>
           <p>hero project</p>
         </Link>
         { links }
@@ -27,7 +27,7 @@ const Navbar = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  //console.log(state);
   return{
     auth: state.firebase.auth,
     profile: state.firebase.profile

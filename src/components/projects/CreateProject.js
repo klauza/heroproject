@@ -67,7 +67,7 @@ class CreateProject extends Component {
     const parentHelmet = document.getElementsByClassName("helmets")[0]; //helmets section in 'completed' svg
     const parentTorsos = document.getElementsByClassName("torsos")[0]; //torsos section in 'completed' svg
     const parentLegs = document.getElementsByClassName("legs")[0]; //legs section in 'completed' svg
-    const completed = document.getElementsByClassName("completed")[0]; //merged all svgs
+    // const completed = document.getElementsByClassName("completed")[0]; //merged all svgs
 
     //change to string "svg-helmets or svg-torsos" also remove any number
     const myNewItem = currentIcon.split('s-').join('').replace(/[0-9]/g, ''); 
@@ -75,7 +75,7 @@ class CreateProject extends Component {
 
 
     // Check if we click on helmet or torso or legs
-    if(myNewItem == 'svg-helmet'){  //HELMET
+    if(myNewItem === 'svg-helmet'){  //HELMET
 
         //delete previous helmet if there is
       if(parentHelmet.hasChildNodes()){
@@ -87,13 +87,13 @@ class CreateProject extends Component {
         //displaying - removing display: none; css
         
     } else 
-    if (myNewItem == 'svg-torso'){  //TORSO
+    if (myNewItem === 'svg-torso'){  //TORSO
       if(parentTorsos.hasChildNodes()){
         parentTorsos.removeChild(parentTorsos.firstChild);
       }
       parentTorsos.appendChild(currentTargetCloned); 
     } else
-    if (myNewItem == 'svg-leg'){  //LEGS
+    if (myNewItem === 'svg-leg'){  //LEGS
       if(parentLegs.hasChildNodes()){
         parentLegs.removeChild(parentLegs.firstChild);
       }
@@ -118,7 +118,8 @@ class CreateProject extends Component {
 
   render() {
 
-    const { auth, projError } = this.props;
+    const { auth} = this.props;
+    //const { projError } = this.props; // is not being used
     if (!auth.uid) return <Redirect to='/signin' />
 
     
@@ -154,13 +155,13 @@ class CreateProject extends Component {
 
             <p>choose helmet</p>
             <div className="input-field">
-                <label className="svg-helmets-1" onClick={this.clickIcon}>
-                  <img className="svg-icons" src={head1} />
+                <label className="svg-helmets-1" onClick={this.clickIcon} >
+                  <img className="svg-icons" src={head1} alt="svg-icon"/>
                   <input id="svg1" type="radio" src={head1} name="head-radio" />
                 </label>
               
                 <label className="svg-helmets-2" onClick={this.clickIcon}>
-                  <img className="svg-icons" src={head2} />
+                  <img className="svg-icons" src={head2} alt="svg-icon"/>
                   <input id="svg1" type="radio" src={head2} name="head-radio" />
                 </label>
             </div>
@@ -169,12 +170,12 @@ class CreateProject extends Component {
             <p>choose chest</p>
             <div className="input-field">
               <label className="svg-torsos-1" onClick={this.clickIcon}>
-                <img className="svg-icons" src={chest1} />
+                <img className="svg-icons" src={chest1} alt="svg-icon"/>
                 <input id="svg2" type="radio" src={chest1} name="chest-radio"/>
               </label>
    
               <label className="svg-torsos-2" onClick={this.clickIcon}>
-                <img className="svg-icons" src={chest2} />
+                <img className="svg-icons" src={chest2} alt="svg-icon"/>
                 <input id="svg2" type="radio" src={chest2} name="chest-radio"/>
               </label>
             </div>
@@ -183,12 +184,12 @@ class CreateProject extends Component {
           <p>choose legs</p>
           <div className="input-field">
               <label className="svg-legs-1" onClick={this.clickIcon}>
-                <img className="svg-icons" src={legs1} />
+                <img className="svg-icons" src={legs1} alt="svg-icon"/>
                 <input id="svg3" type="radio" src={legs1} name="legs-radio"/>
               </label>
 
               <label className="svg-legs-2" onClick={this.clickIcon}>
-                <img className="svg-icons" src={legs2} />
+                <img className="svg-icons" src={legs2} alt="svg-icon"/>
                 <input id="svg3" type="radio" src={legs2} name="legs-radio"/>
               </label>
             </div>
@@ -203,8 +204,9 @@ class CreateProject extends Component {
             <svg className="svg-legs-2-svg" height="683" viewBox="-92 0 512 512" width="683" xmlns="http://www.w3.org/2000/svg"><path d="M297 44H31V13c0-3 3-5 5-5h256c3 0 5 2 5 5zm0 0" fill="#e8dacd"/><path d="M297 44h-30V8h25c3 0 5 2 5 5zm0 0" fill="#e5ccb7"/><path d="M104 504H30c-7 0-13-5-13-12v-22h99v22c0 7-5 12-12 12zm0 0M300 504h-74c-7 0-12-5-12-12v-22h99v22c0 7-6 12-13 12zm0 0" fill="#e8dacd"/><path d="M313 470v22c0 7-6 12-13 12h-21c7 0 12-5 12-12v-22zm0 0M116 470v22c0 7-5 12-12 12H83c6 0 12-5 12-12v-22zm0 0" fill="#e5ccb7"/><path d="M317 93l-20-49H31L11 93c-2 6-3 12-3 19v347c0 6 4 11 10 11h97c6 0 10-5 10-11l16-106 22-176c0-2 2-2 2 0l23 176 15 106c0 6 5 11 11 11h96c6 0 11-5 11-11V112c0-7-1-13-4-19zm0 0" fill="#f79341"/><path d="M321 112v347c0 6-5 11-11 11h-19V114c0-7-1-13-3-19l-21-51h30l20 49c3 6 4 12 4 19zm0 0" fill="#ef7e29"/><path d="M208 129h-12c-4 0-8-4-8-8V33l2-2h24l2 2v88c0 4-3 8-8 8zm0 0M132 129h-12c-4 0-8-4-8-8V33l2-2h24c2 0 2 1 2 2v88c1 4-3 8-8 8zm0 0" fill="#28c6db"/><path d="M132 129h-6V31h12c2 0 2 1 2 2v88c1 4-3 8-8 8zm0 0M208 129h-6V31h12l2 2v88c0 4-3 8-8 8zm0 0" fill="#17b5c1"/><path d="M324 90l-19-48V13c0-7-6-13-13-13H124a8 8 0 1 0 0 15h166v21h-66v-3c0-5-5-10-10-10h-24c-5 0-9 5-9 10v3h-33v-3c0-5-4-10-10-10h-24c-5 0-9 5-9 10v3H39V15h39a7 7 0 1 0 0-15H36c-6 0-12 6-12 13v29L4 90c-3 7-4 14-4 22v347c0 7 4 13 10 16v17c0 11 9 20 20 20h74c11 0 20-9 20-20v-17c5-3 9-9 9-16l15-105 16-127 14 107a7 7 0 1 0 15-2l-20-156c-1-5-4-8-9-8-4 0-8 3-8 8l-23 176-15 106v1c0 2-1 3-3 3H18c-2 0-3-1-3-3V112c0-6 1-11 3-16l18-45h69v70c0 9 7 16 15 16h12c9 0 16-7 16-16V51h33v70c0 9 7 16 15 16h12c9 0 16-7 16-16V51h68l18 45c3 5 4 10 4 16v347c0 2-2 3-4 3h-96c-2 0-3-1-3-3v-1l-12-81a8 8 0 0 0-15 2l12 80c0 8 4 14 10 16v17c0 11 9 20 20 20h74c11 0 20-9 20-20v-18c5-3 9-9 9-15V112c0-8-2-15-5-22zM109 477v15c0 3-2 5-5 5H30c-3 0-5-2-5-5v-15zm24-356l-1 1h-12V38h13zm76 0l-1 1h-12V38h13v83zm96 371c0 3-2 5-5 5h-74c-3 0-5-2-5-5v-15h84zm0 0"/></svg>
           </div>
 
-          <p>preview:</p>
+          
           <div className="completed">
+            <p>preview:</p>
             <div className="helmets">
 
             </div>
