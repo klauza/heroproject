@@ -33,35 +33,34 @@ class SignIn extends Component {
     if (auth.uid) return <Redirect to='/' />
 
     return (
-      <div className="container">
+      <div className="container sign-in-container">
         <form onSubmit={this.handleSubmit} className="signForm">
           <h5>Sign In</h5>
 
-          <div className="input-field">
+          <div className="input-field-sign">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handleChange} />
           </div>
 
-          <div className="input-field">
+          <div className="input-field-sign">
             <label htmlFor="password">Password</label>
             <input type="password" id="password" onChange={this.handleChange} />
           </div>
 
-          <div className="input-field">
-            <button className="btn">Login</button>
+          <div className="input-field-sign">
+            <button className="btn-sign">Login</button>
 
             { authError ? <p>{authError}</p> : null }
           </div>
 
         </form>
-      
-      <p>View last 3 projects.</p><br />
-      <div className="dashboard container">
-        <div className="dashboard-row">
-          <div className="dashboard-row__col1"> <ProjectList projects={projects} /> </div>
+        
+        <div className="container dashboard sign-in-projects">
+          <p>3 last projects:</p>
+          <div className="dashboard-row">
+            <div className="dashboard-row__col1"> <ProjectList projects={projects} /> </div>
+          </div>
         </div>
-      </div>
-
       </div>
     )
   }
