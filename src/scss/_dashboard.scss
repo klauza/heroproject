@@ -78,18 +78,30 @@
         top: 0px;
         margin-top: 25px;
         padding: 25px 0;
+        font-family: Verdana, sans-serif;
+        cursor: default;
 
         &__name{
           text-align: center;
+          font-size: 1.25em;
         }
         &__page{
           text-align: center;
           margin-top: 30px;
+          font-size: 1.25em;
         }
         &__desc{
           text-align: center;
-          padding: 0 45px;
+          padding: 0 5%;
           margin-top: 10px;
+        }
+        &__desc ol li{
+          text-align: left;
+
+          &:hover{
+            color: rgb(58, 58, 58);
+          }
+          
         }
       }
     }

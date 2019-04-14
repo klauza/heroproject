@@ -4,7 +4,8 @@ import ProjectList from '../projects/ProjectList';
 import { connect } from 'react-redux';
 //higher order component
 
-import { firestoreConnect, firebase } from 'react-redux-firebase';
+import { firestoreConnect} from 'react-redux-firebase';
+// import { firebase } from 'react-redux-firebase'; it was not used
 import { compose } from 'redux';
 import { Redirect } from 'react-router-dom'
 
@@ -13,7 +14,7 @@ class Dashboard extends Component {
     const { projects, auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' />
 
-    console.log(this.props);
+    // console.log(this.props);
 
     return(
       <div className="dashboard container">

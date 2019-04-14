@@ -1,7 +1,8 @@
 A fullstack app<br>
-current version: v0.1.3<br><br>
+current version: v0.1.4<br><br>
 version history:<br>
 
+- v0.1.4 sass added for ProjectDetails & CreateProject. Created MergeSvg function ver1.
 - v0.1.3 create hero live function, svg scaled down, credits: https://jakearchibald.github.io/svgomg/
 - v0.1.2 sass edits
 - v0.1.1 svg added, validation project done

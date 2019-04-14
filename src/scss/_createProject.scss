@@ -60,4 +60,30 @@
       height: 100%;
     }
   }
+
+  // preview bottom box
+  .completed{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px auto;
+  }
+  .completed {
+    text-align: center;
+    
+    .helmets,
+    .torsos,
+    .legs{
+      &>*{
+      width: 50px;
+      height: 50px;
+      //border: 1px solid red;
+    }
+    p{
+      text-align: center;
+      text-transform: uppercase;
+    }
+    }
+  }
+
 }
