@@ -52,6 +52,8 @@ downloadLink.appendChild(clonePants);
 console.log(downloadLink);
 console.log(downloadLink.id);
   
+
+//save file
 function saveSvg(svgEl, name) {
   
   const svgData = svgEl.outerHTML;

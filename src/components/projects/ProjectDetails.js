@@ -29,9 +29,9 @@ function ProjectDetails(props) {
         <div className="project-details__card-content">
           <div className="svg-container-details" id="svg-items">
             
-            <object className="svg-item" data={project.svg3} alt="svg3"></object>
-            <object className="svg-item" data={project.svg2} alt="svg2"></object>
-            <object className="svg-item" data={project.svg1} alt="svg1"></object>
+            <object className="svg-item" data={project.svg3} aria-label="svg3"></object>
+            <object className="svg-item" data={project.svg2} aria-label="svg2"></object>
+            <object className="svg-item" data={project.svg1} aria-label="svg1"></object>
             
           </div>
           <div className="about-project">

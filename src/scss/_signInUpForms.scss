@@ -1,0 +1,50 @@
+
+
+.signForm{
+  text-align: center;
+
+  h5{
+    font-size: 2.25em;
+  }
+
+  .input-field-sign{
+    display: flex;
+    flex-direction: column;
+
+    input{
+      width: 30%;
+      height: 25px;
+      margin: 0 auto;
+      font-size: 1.15em;
+      &:focus{
+        background: #d4d4d4;
+      }
+
+    }
+    .btn-sign{
+        width: 200px;
+        margin: 25px auto;
+        padding: 10px 0;
+    }
+  }
+}
+
+.sign-in-container{
+  .sign-in-projects{
+    display: flex;
+    flex-direction: column;
+    &>p{
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.5em;
+    }
+    .dashboard-row{
+      display: grid;
+      grid-template-columns: 1fr;
+      &__col1{
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

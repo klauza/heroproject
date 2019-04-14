@@ -27,34 +27,39 @@ class SignUp extends Component {
     const { auth, authError } = this.props;
     if (auth.uid) return <Redirect to='/' />
 
+    const { firstName, lastName } = this.state;
+    const isEnabled =
+    firstName.length > 1 &&
+    lastName.length > 1;
+
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="signForm">
           <h5>Sign Up</h5>
 
-          <div className="input-field">
+          <div className="input-field-sign">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handleChange} />
           </div>
 
-          <div className="input-field">
+          <div className="input-field-sign">
             <label htmlFor="password">Password</label>
             <input type="password" id="password" onChange={this.handleChange} />
           </div>
 
-          <div className="input-field">
+          <div className="input-field-sign">
             <label htmlFor="firstName">First Name</label>
             <input type="text" id="firstName" onChange={this.handleChange} />
           </div>
 
-          <div className="input-field">
+          <div className="input-field-sign">
             <label htmlFor="lastName">Last Name</label>
             <input type="text" id="lastName" onChange={this.handleChange} />
           </div>
 
 
-          <div className="input-field">
-            <button className="btn">Sign up</button>
+          <div className="input-field-sign">
+            <button className="btn-sign" disabled={!isEnabled}>Sign up</button>
             <div>{authError ? <p>{ authError }</p> : null }</div>
           </div>
 
