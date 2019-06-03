@@ -1,6 +1,11 @@
 A fullstack app<br>
-current version: v0.1.5<br><br>
-version history:<br>
+current version: v0.2.0<br><br>
+
+- v0.2.0  sign-in/up forms made nice
+
+<details>
+<summary>version history for 0.0.1 to 0.1.5:</summary>
+<br>
 
 - v0.1.5 more svg icons, signIn/Up page styled
 - v0.1.4 sass added for ProjectDetails & CreateProject. Created MergeSvg function ver1.
@@ -17,6 +22,9 @@ version history:<br>
 - v0.0.3b Adding dummy data.
 - v0.0.3a Redux, reducers set up, store set up
 - v0.0.1-0.0.3 Project init
+
+</details>
+
 <br>
 ## Available Scripts
 
