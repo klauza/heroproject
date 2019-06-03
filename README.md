@@ -1,28 +1,27 @@
-A fullstack app<br>
-current version: v0.2.0<br><br>
-
-- v0.2.0  sign-in/up forms made nice
+## current version: v0.2.0
+- `v0.2.0` sign-in/up forms made nice 
+- `v0.2.1` nav links twitched
+<br><br>
 
 <details>
 <summary>version history for 0.0.1 to 0.1.5:</summary>
 <br>
 
-- v0.1.5 more svg icons, signIn/Up page styled
-- v0.1.4 sass added for ProjectDetails & CreateProject. Created MergeSvg function ver1.
-- v0.1.3 create hero live function, svg scaled down, credits: https://jakearchibald.github.io/svgomg/
-- v0.1.2 sass edits
-- v0.1.1 svg added, validation project done
-- v0.1.0 finished the fundamentals
-- v0.0.9a/b User sign up system + profile data access & Date change.
-- v0.0.8 Redirections
-- v0.0.7a/b Authentication, creating user system - logging in/out.
-- v0.0.6 Dependecies version changed. Connect to firebase and displaying data.
-- v0.0.5 Firebase implementation
-- v0.0.4 redux-thunk
-- v0.0.3b Adding dummy data.
-- v0.0.3a Redux, reducers set up, store set up
-- v0.0.1-0.0.3 Project init
-
+- `v0.1.5` more svg icons, signIn/Up page styled
+- `v0.1.4` sass added for ProjectDetails & CreateProject. Created MergeSvg function ver1.
+- `v0.1.3` create hero live function, svg scaled down, credits: https://jakearchibald.github.io/svgomg/
+- `v0.1.2` sass edits
+- `v0.1.1` svg added, validation project done
+- `v0.1.0` finished the fundamentals
+- `v0.0.9a/b` User sign up system + profile data access & Date change.
+- `v0.0.8` Redirections
+- `v0.0.7a/b` Authentication, creating user system - logging in/out.
+- `v0.0.6` Dependecies version changed. Connect to firebase and displaying data.
+- `v0.0.5` Firebase implementation
+- `v0.0.4` redux-thunk
+- `v0.0.3b` Adding dummy data.
+- `v0.0.3a` Redux, reducers set up, store set up
+- `v0.0.1-0.0.3` Project init
 </details>
 
 <br>

@@ -27,8 +27,10 @@ class SignUp extends Component {
     const { auth, authError } = this.props;
     if (auth.uid) return <Redirect to='/' />
 
-    const { firstName, lastName } = this.state;
+    const { firstName, lastName, email, password } = this.state;
     const isEnabled =
+    email.length > 3 &&
+    password.length > 1 &&
     firstName.length > 1 &&
     lastName.length > 1;
 
@@ -38,28 +40,24 @@ class SignUp extends Component {
           <h5>Sign Up</h5>
 
           <div className="input-field-sign">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" onChange={this.handleChange} />
+            <input type="email" id="email" placeholder="email" onChange={this.handleChange} />
           </div>
 
           <div className="input-field-sign">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" onChange={this.handleChange} />
+            <input type="password" id="password" placeholder="password" onChange={this.handleChange} />
           </div>
 
           <div className="input-field-sign">
-            <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" onChange={this.handleChange} />
+            <input type="text" id="firstName" placeholder="first name" onChange={this.handleChange} />
           </div>
 
           <div className="input-field-sign">
-            <label htmlFor="lastName">Last Name</label>
-            <input type="text" id="lastName" onChange={this.handleChange} />
+            <input type="text" id="lastName" placeholder="last name" onChange={this.handleChange} />
           </div>
 
 
           <div className="input-field-sign">
-            <button className="btn-sign" disabled={!isEnabled}>Sign up</button>
+            <button className="btn-sign" disabled={!isEnabled}>Create user</button>
             <div>{authError ? <p>{ authError }</p> : null }</div>
           </div>
 
