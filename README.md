@@ -27,6 +27,8 @@
 </details>
 
 <br>
+Creadits: https://www.thenetninja.co.uk/
+<br>
 ## Available Scripts
 
 In the project directory, you can run:
