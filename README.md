@@ -27,7 +27,7 @@
 </details>
 
 <br>
-Creadits: https://www.thenetninja.co.uk/
+Credits to: https://www.thenetninja.co.uk/
 <br>
 ## Available Scripts
 
