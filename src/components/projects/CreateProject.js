@@ -166,13 +166,11 @@ class CreateProject extends Component {
           <div className="hero-details">
             <h5>Create new hero</h5>
             <div className="input-field">
-              <label className="input-title-text" htmlFor="title">Hero name (at least 2 chars)</label>
-              <input className="input-title-textfield" type="text" id="title" onChange={this.handleChange} />
+             <input maxLength="18" className="input-name" type="text" id="title" placeholder="Hero name (minimum 2 chars)" onChange={this.handleChange} />
             </div>
 
             <div className="input-field">
-              <label maxLength="15" className="input-title-text" htmlFor="content">Hero description (at least 5 chars)</label>
-              <textarea maxLength="75" className="input-title-textfield textfield" id="content" onChange={this.handleChange}></textarea>
+              <textarea maxLength="75" className="input-textfield textfield" id="content" placeholder={`Hero description - min 5 chars`} onChange={this.handleChange}></textarea>
             </div>
           </div>
 
@@ -180,7 +178,7 @@ class CreateProject extends Component {
           
           <div className="hero-accessories">
 
-            <p>choose helmet</p>
+            <p>choose a helmet</p>
             <div className="input-field">
                 <label className="svg-helmets-1" onClick={this.clickIcon} >
                   <img className="svg-icons" src={head1} alt="svg-icon"/>
@@ -283,7 +281,7 @@ class CreateProject extends Component {
             </div>
 
 
-            <p>choose chest</p>
+            <p>choose a chest</p>
             <div className="input-field">
               <label className="svg-torsos-1" onClick={this.clickIcon}>
                 <img className="svg-icons" src={chest1} alt="svg-icon"/>
