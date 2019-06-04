@@ -1,6 +1,8 @@
-## current version: v0.2.0
-- `v0.2.0` sign-in/up forms made nice 
+## current live version: v0.2.2
+- `v0.2.2` 'create' & 'details' pages reworked
 - `v0.2.1` nav links twitched
+- `v0.2.0` sign-in/up forms made nice 
+
 <br><br>
 
 <details>
@@ -29,7 +31,7 @@
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` & `gulp watch`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

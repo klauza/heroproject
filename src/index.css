@@ -73,17 +73,17 @@ code {
     .nav-wrapper .right .user-button {
       background: #ffc6c6; }
   .nav-wrapper .signed-out-links > li:hover:nth-of-type(1) > * {
-    background: linear-gradient(top, #d4e4ef 0%, #86aecc 100%); }
+    background: linear-gradient(to bottom, #d4e4ef 0%, #86aecc 100%); }
   .nav-wrapper .signed-out-links > li:hover:nth-of-type(2) > * {
-    background: linear-gradient(top, #6be971 0%, #36b03c 100%); }
+    background: linear-gradient(to bottom, #6be971 0%, #36b03c 100%); }
   .nav-wrapper .signed-in-links > li:nth-of-type(1) > * {
-    background: linear-gradient(top, #05e205 0%, rgba(14, 187, 14, 0.5) 100%); }
+    background: linear-gradient(to bottom, #05e205 0%, rgba(14, 187, 14, 0.5) 100%); }
     .nav-wrapper .signed-in-links > li:nth-of-type(1) > *:hover {
-      background: linear-gradient(top, #07fc07 0%, rgba(14, 187, 14, 0.7) 100%); }
+      background: linear-gradient(to bottom, #07fc07 0%, rgba(14, 187, 14, 0.7) 100%); }
   .nav-wrapper .signed-in-links > li:nth-of-type(2) > * {
-    background: linear-gradient(top, #fd6f6f 0%, #ff2929 100%); }
+    background: linear-gradient(to bottom, #fd6f6f 0%, #ff2929 100%); }
     .nav-wrapper .signed-in-links > li:nth-of-type(2) > *:hover {
-      background: linear-gradient(top, #ff5a5a 0%, red 100%);
+      background: linear-gradient(to bottom, #ff5a5a 0%, red 100%);
       cursor: pointer; }
 
 .dashboard-row {
@@ -270,49 +270,86 @@ code {
 .create-project-container .hero-details {
   font-family: Verdana, sans-serif; }
   .create-project-container .hero-details h5 {
+    font-family: "Raleway", sans-serif;
     text-align: center;
     font-size: 2em;
-    margin-bottom: 25px; }
-  .create-project-container .hero-details .input-field {
-    text-align: center;
-    display: block; }
-    .create-project-container .hero-details .input-field .input-title-text {
-      display: block; }
-    .create-project-container .hero-details .input-field .input-title-textfield {
-      display: block;
-      width: 300px;
-      height: 50px;
-      margin: 0 auto;
-      font-size: 2.25em;
-      background: rgba(255, 0, 0, 0.185); }
-    .create-project-container .hero-details .input-field .textfield {
-      height: 100px;
-      font-size: 1.6em; }
+    margin: 25px 0; }
+  .create-project-container .hero-details input, .create-project-container .hero-details textarea {
+    font-family: Verdana, sans-serif;
+    display: block;
+    margin: 5px auto;
+    background: #48e433;
+    border: 2px solid #15b400;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.15em; }
+    .create-project-container .hero-details input:focus, .create-project-container .hero-details textarea:focus {
+      background: #4ffd37;
+      box-shadow: 0px 3px 10px 0px #a3a3a3;
+      border: 2px solid #a5cda5;
+      color: green; }
+    .create-project-container .hero-details input::-webkit-input-placeholder, .create-project-container .hero-details textarea::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.404); }
+    .create-project-container .hero-details input::-ms-input-placeholder, .create-project-container .hero-details textarea::-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.404); }
+    .create-project-container .hero-details input::placeholder, .create-project-container .hero-details textarea::placeholder {
+      color: rgba(0, 0, 0, 0.404); }
+  .create-project-container .hero-details .input-name {
+    width: 300px;
+    height: 45px; }
+  .create-project-container .hero-details .input-textfield {
+    color: black;
+    width: 300px;
+    height: 80px; }
 
-.create-project-container .hero-accessories {
-  font-family: Verdana, sans-serif; }
-  .create-project-container .hero-accessories p {
-    text-align: center;
-    margin-top: 15px; }
-  .create-project-container .hero-accessories .input-field {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-            justify-content: center; }
+.create-project-container .hero-accessories p {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900; }
+  .create-project-container .hero-accessories p::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 1px;
+    background: black; }
+
+.create-project-container .hero-accessories p:nth-child(1) {
+  margin-top: 45px; }
+
+.create-project-container .hero-accessories .input-field {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center; }
 
 .create-project-container .input-field-submit {
   width: 175px;
-  margin: 0 auto;
-  height: 30px; }
+  margin: 5px auto;
+  height: 50px; }
   .create-project-container .input-field-submit button {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.05em;
+    font-family: "Sawarabi Mincho", sans-serif;
+    background: green;
+    border: 2px solid white; }
+    .create-project-container .input-field-submit button:disabled {
+      color: black;
+      background: red;
+      border: 1px solid black; }
+    .create-project-container .input-field-submit button:hover {
+      cursor: pointer; }
 
 .create-project-container .completed {
   width: 200px;
   height: 200px;
   border: 1px solid black;
-  margin: 10px auto; }
+  margin: 60px auto 0 auto; }
 
 .create-project-container .completed {
   text-align: center; }
@@ -371,13 +408,34 @@ code {
         font-size: 2em;
         font-weight: bold;
         font-family: "Sawarabi Mincho", sans-serif;
-        text-transform: uppercase; }
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #096ef3; }
+        .project-details__card-content .about-project .project-title::after {
+          content: '';
+          display: block;
+          margin: 5px auto;
+          height: 1px;
+          background: black;
+          width: 100%; }
       .project-details__card-content .about-project .project-content {
         font-family: Verdana, sans-serif; }
       .project-details__card-content .about-project .merge-svg-button {
-        margin-top: 10px;
-        width: 100px;
-        height: 40px; }
+        font-family: "Raleway", sans-serif;
+        background: #0f60c9;
+        color: white;
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 50px;
+        width: 200px;
+        min-height: 60px;
+        font-size: 1.5em;
+        box-shadow: 0px 3px 10px 0px #a3a3a3; }
+        .project-details__card-content .about-project .merge-svg-button:hover {
+          background: #2072dd;
+          cursor: pointer;
+          box-shadow: 0px 3px 10px 0px #a3a3a3; }
   .project-details__card-action {
     margin-top: 10px;
     text-align: center; }
