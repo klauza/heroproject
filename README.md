@@ -7,6 +7,10 @@ Inspired by https://www.thenetninja.co.uk/
 
 <br/>
 
+<img src="https://user-images.githubusercontent.com/43997053/115122194-95b93180-9fae-11eb-8b68-dd1d6cb9eaaf.PNG" width="500">
+
+<br/>
+
 ## Scripts
 
 ### `npm start` & `gulp watch`
